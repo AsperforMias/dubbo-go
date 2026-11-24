@@ -48,6 +48,9 @@ func init() {
 	extension.SetTraceExporter("jaeger", newJaegerExporter)
 }
 
+// Exporter exports spans to Jaeger's collector endpoint.
+//
+// Deprecated: use the otlp-http or otlp-grpc exporter instead.
 type Exporter struct {
 	*trace.DefaultExporter
 }
